@@ -60,3 +60,52 @@ html {
     transform: translate(50px, 50px);
   }
 }
+/* Navbar Styles */
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  color: white;
+  opacity: 0; /* For slide-in */
+  transform: translateY(-100%);
+}
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #ffc371;
+}
+
+/* Pulse animation class */
+.btn.pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
